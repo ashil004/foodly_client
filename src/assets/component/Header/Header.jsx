@@ -4,16 +4,17 @@ import { Link, NavLink } from "react-router-dom";
 const Header = () => {
 
     const link = <>
-        <li><NavLink to={'/'} >Home</NavLink></li>
-        <li><NavLink to={'/services'} >Services</NavLink></li>
-        <li><NavLink to={'/about'} >About</NavLink></li>
-        <li><NavLink to={'/contact'} >Contact</NavLink></li>
+        <li className="text-teal-400 font-bold text-xl"><NavLink to={'/'} >Home</NavLink></li>
+        <li className="text-teal-400 font-bold text-xl"><NavLink to={'/services'} >Services</NavLink></li>
+        <li className="text-teal-400 font-bold text-xl "><NavLink to={'/about'} >About</NavLink></li>
+        <li className="text-teal-400 font-bold text-xl"><NavLink to={'/contact'} >Contact</NavLink></li>
 
 
     </>
 
     return (
-        <div className="navbar bg-base-100">
+        <div>
+            <div className="navbar bg-pink-300  p-14">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -40,6 +41,7 @@ const Header = () => {
 
 
             </div>
+        </div>
         </div>
     );
 };
