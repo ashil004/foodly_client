@@ -9,6 +9,11 @@ import {
 import Root from './assets/component/Header/Root/Root.jsx';
 import Error from './assets/component/Error/Error.jsx';
 import Home from './assets/component/Header/Home/Home.jsx';
+import About from './assets/component/About/About';
+import Contact from './assets/component/Contact/Contact';
+import Services from './assets/component/Services/Services';
+import Login from './assets/component/LogIn/Login';
+import Register from './assets/component/Register/Resgister';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +24,30 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>
+      },
+      {
+        path:"/about",
+        element:<About/>,
+      },
+      {
+        path:"/contact",
+        element:<Contact/>,
+
+      },
+      {
+        path:"/services",
+        element:<Services/>,
+
+      },
+      {
+        path:"login",
+        element:<Login/>,
+      },
+      {
+        path:"/register",
+        element:<Register/>,
       }
+
     ]
 
   },
