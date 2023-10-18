@@ -5,9 +5,10 @@ const Header = () => {
 
     const link = <>
         <li className="text-sky-600 font-bold text-xl"><NavLink to={'/'} >Home</NavLink></li>
-        <li className="text-sky-600 font-bold text-xl"><NavLink to={'/services'} >Services</NavLink></li>
+        <li className="text-sky-600 font-bold text-xl"><NavLink to={'/services'} >User Order</NavLink></li>
         <li className="text-sky-600 font-bold text-xl "><NavLink to={'/about'} >About</NavLink></li>
         <li className="text-sky-600 font-bold text-xl"><NavLink to={'/contact'} >Contact</NavLink></li>
+        <li className="text-sky-600 font-bold text-xl"><NavLink to={'/order'} >Order</NavLink></li>
 
 
     </>

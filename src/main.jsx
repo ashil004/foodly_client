@@ -14,6 +14,7 @@ import Contact from './assets/component/Contact/Contact';
 import Services from './assets/component/Services/Services';
 import Login from './assets/component/LogIn/Login';
 import Register from './assets/component/Register/Resgister';
+import Order from './assets/component/order/Order';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path:"/register",
         element:<Register/>,
+      },
+      {
+        path:"/order",
+        element:<Order/>,
       }
 
     ]
