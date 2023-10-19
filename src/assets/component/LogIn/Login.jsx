@@ -1,11 +1,15 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Authprovider/AuthProvider";
+import { GoogleAuthProvider,  getAuth, signInWithPopup, } from "firebase/auth";
+import app from "../FireBase/firebase.config";
+
 
 
 
 const Login = () => {
     const { singIn } = useContext(AuthContext);
+    
     const LoginOnclick = event => {
         event.preventDefault();
         const from = event.target;
@@ -22,7 +26,25 @@ const Login = () => {
             })
 
 
+    }
 
+
+    const logingwithGoogle = () => {
+        const provider = new GoogleAuthProvider();
+        const Auth  = getAuth(app);
+        signInWithPopup(Auth, provider)
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+                setmanages(user.email);
+
+
+            }).catch((error) => {
+                const errorMessage = error.message;
+                console.log(errorMessage);
+
+        })
+    
     }
     return (
         <div>
@@ -46,7 +68,7 @@ const Login = () => {
                     </div>
                     <div className="form-control mt-6">
                         <button className="btn order-blue-400 rounded-lg bg-blue-400 text-white hover:text-black">Login</button>
-                        <button className="btn order-blue-400 rounded-lg bg-blue-400 text-white hover:text-black"> Login In Google</button>
+                        <button onClick={logingwithGoogle}  className="btn order-blue-400 rounded-lg bg-blue-400 text-white hover:text-black"> Login In Google</button>
                         <div className='flex items-center gap-4'>
                             <p className='text-xl'>Don't have an account?  </p>
                             <Link to='/register' className="label-text-alt link link-hover text-blue-800 text-xl">Register</Link>
