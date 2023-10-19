@@ -16,6 +16,7 @@ import Login from './assets/component/LogIn/Login';
 import Register from './assets/component/Register/Resgister';
 import Order from './assets/component/order/Order';
 import AuthProvider from './assets/component/Authprovider/AuthProvider';
+import PrivetRouter from './assets/component/PrivetRoter/PrivetRouter';
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/about",
-        element:<About/>,
+        element:<PrivetRouter><About/></PrivetRouter>,
       },
       {
         path:"/contact",
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/services",
-        element:<Services/>,
+        element:<PrivetRouter><Services/></PrivetRouter>,
 
       },
       {
@@ -51,7 +52,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/order",
-        element:<Order/>,
+        element:<PrivetRouter><Order/></PrivetRouter>,
       }
 
     ]

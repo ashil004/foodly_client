@@ -1,7 +1,17 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Authprovider/AuthProvider";
 
 
 const Header = () => {
+    const {user , logOut } = useContext(AuthContext);
+    const clickOnLogout = ()=>{
+
+        logOut()
+        .then()
+        .catch();
+    }
+
 
     const link = <>
         <li className="text-sky-600 font-bold text-xl"><NavLink to={'/'} >Home</NavLink></li>
@@ -35,10 +45,14 @@ const Header = () => {
             <div className="navbar-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                        <img src={"https://i.ibb.co/fQ15fh8/ben-sweet-2-Lowvi-VHZ-E-unsplash.jpg"} />
+                        {
+                            user ? <img src={user.photoURL}/> :<img src={"https://i.ibb.co/fQ15fh8/ben-sweet-2-Lowvi-VHZ-E-unsplash.jpg"} />
+                        }
                     </div>
                 </label>
-                <Link to={'/login'} ><button className="btn ">Login</button></Link>
+                {
+                    user ? <button onClick={clickOnLogout} className="btn ">LogOut</button> :<Link to={'/login'} ><button className="btn ">Login</button></Link>
+                }
 
 
             </div>

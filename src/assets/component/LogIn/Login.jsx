@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Authprovider/AuthProvider";
 import { GoogleAuthProvider,  getAuth, signInWithPopup, } from "firebase/auth";
 import app from "../FireBase/firebase.config";
@@ -9,6 +9,8 @@ import app from "../FireBase/firebase.config";
 
 const Login = () => {
     const { singIn } = useContext(AuthContext);
+    const location = useLocation();
+    const Navigate =useNavigate();
     
     const LoginOnclick = event => {
         event.preventDefault();
@@ -19,6 +21,7 @@ const Login = () => {
         singIn(email, password)
             .then((result) => {
                 console.log(result);
+                Navigate(location ?.state ? location.state : '/');
             })
             .catch((error) => {
                 const errorMessage = error.message;
