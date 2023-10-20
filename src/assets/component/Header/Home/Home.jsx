@@ -14,9 +14,13 @@ const Home = () => {
             <div className="mt-6">
                 <h3 className="font-semibold text-teal-400 text-center">Best For You</h3>
                 <h3 className="font-bold text-5xl text-center">Our Beverage</h3>
-                {
+               <div className="grid md:grid-cols-3 gap-4">
+               {
                     Brands.map(Brand =><Cardsection key={Brand._id} Brands={Brand} ></Cardsection>)
                 }
+                
+
+               </div>
             </div>
             <div className="mt-6">
                 <h3 className="font-semibold text-teal-400 text-center">Testimonial</h3>

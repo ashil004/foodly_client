@@ -12,7 +12,7 @@ const Services = () => {
         const productObject ={ photo,product,price,description,rating };
         console.log(productObject);
         
-        fetch('http://localhost:5000/brand',{
+        fetch('http://localhost:5000/foodliy/Brand/cocolas',{
             method:'POST',
             headers:{
                 "content-type": "application/json",

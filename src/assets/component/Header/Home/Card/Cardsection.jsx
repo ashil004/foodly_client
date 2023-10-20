@@ -1,14 +1,32 @@
-import { useEffect, useState } from "react";
+
+import { Link } from "react-router-dom";
 
 
-const Cardsection = ({Brands}) => {
-    const { product} =Brands
-    
-    
+const Cardsection = ({ Brands }) => {
+    const { photo, product,price,description,rating,_id } = Brands;
+   
+
+
     return (
-        <div>
-            <h3>{product}</h3>
+        
+            <div  className="card w-96 bg-base-100 shadow-xl">
+                {/* <Link to={`/Brands/${_id}`}> */}
+
+                <figure className="px-10 pt-10">
+                <img src={photo} alt="Brands" className="rounded-xl" />
+            </figure>
+            <div className="card-body items-center text-center">
+                <h2 className="card-title">{product}</h2>
+                
+                
+            </div>
+                {/* </Link> */}
+
+            
+            
+            
         </div>
+       
     );
 };
 
