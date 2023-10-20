@@ -1,17 +1,40 @@
+import Swal from 'sweetalert2'
 const Services = () => {
 
     const box = event => {
         event.preventDefault();
         const from = event.target;
-        const p =from.photo.value;
-        const pn =from.product.value;
+        const photo =from.photo.value;
+        const product =from.product.value;
         const price = from.price.value;
-        const des =from.description.value;
-        const reting =from.rating.value;
-        const productObject ={p,pn,price,des,reting};
+        const description =from.description.value;
+        const rating =from.rating.value;
+        const productObject ={ photo,product,price,description,rating };
         console.log(productObject);
         
-        //send the data 
+        fetch('http://localhost:5000/brand',{
+            method:'POST',
+            headers:{
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(productObject)
+            
+
+        })
+        .then((res) => res.json())
+        .then((data) =>{
+            console.log(data);
+
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'User added successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+            }
+        })
+        
          
       
        

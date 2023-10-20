@@ -84,6 +84,7 @@ const Register = () => {
                     </div>
 
                 </form>
+                {registerError && <p className="text-center text-red-500 p-6">{registerError}</p>}
                 
 
 

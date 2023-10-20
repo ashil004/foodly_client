@@ -1,3 +1,4 @@
+import { useLoaderData } from "react-router-dom";
 import Bannar from "./Bannar/Bannar";
 import Cardsection from "./Card/Cardsection";
 import SectionOne from "./section1/SectionOne";
@@ -5,6 +6,7 @@ import SectionTow from "./section2/SectionTow";
 
 
 const Home = () => {
+    const Brands = useLoaderData();
     return (
         <div>
             <Bannar></Bannar>
@@ -12,7 +14,9 @@ const Home = () => {
             <div className="mt-6">
                 <h3 className="font-semibold text-teal-400 text-center">Best For You</h3>
                 <h3 className="font-bold text-5xl text-center">Our Beverage</h3>
-                <Cardsection></Cardsection>
+                {
+                    Brands.map(Brand =><Cardsection key={Brand._id} Brands={Brand} ></Cardsection>)
+                }
             </div>
             <div className="mt-6">
                 <h3 className="font-semibold text-teal-400 text-center">Testimonial</h3>
