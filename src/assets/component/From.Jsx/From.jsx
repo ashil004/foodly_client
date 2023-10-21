@@ -1,50 +1,11 @@
-import Swal from 'sweetalert2'
 
-const Services = () => {
 
-    const box = event => {
-        event.preventDefault();
-        const from = event.target;
-        const photo =from.photo.value;
-        const product =from.product.value;
-        const price = from.price.value;
-        const description =from.description.value;
-        const rating =from.rating.value;
-        const productObject ={ photo,product,price,description,rating };
-        console.log(productObject);
-        
-        fetch('http://localhost:5000/Cart',{
-            method:'POST',
-            headers:{
-                "content-type": "application/json"
-            },
-            body: JSON.stringify(productObject)
-            
-
-        })
-        .then((res) => res.json())
-        .then((data) =>{
-            console.log(data);
-
-            if(data.insertedId){
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'User added successfully',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                  })
-            }
-        })
-        
-         
-      
-       
-
-    }
+const From = () => {
     return (
-        <div className="bg-teal-100 p-24">
+        <div>
+                    <div className="bg-sky-400 p-24">
             <h2 className="font-extrabold">Add to the User Order:</h2>
-            <form onSubmit={box}>
+            <form >
                 <div className="md:flex">
                     <div className="form-control md:w-1/2">
                         <label className="label">
@@ -111,9 +72,9 @@ const Services = () => {
             </form>
 
         </div>
-        
+            
+        </div>
     );
 };
 
-export default Services;
-
+export default From;

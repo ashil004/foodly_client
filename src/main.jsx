@@ -29,6 +29,7 @@ import Pthree from './assets/component/IdElement/Pthree';
 import Pfour from './assets/component/IdElement/Pfour';
 import Pfive from './assets/component/IdElement/Pfive';
 import Psix from './assets/component/IdElement/Psix';
+import From from './assets/component/From.Jsx/From';
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,15 @@ const router = createBrowserRouter([
       {
         path:"/register",
         element:<Register/>,
+      },
+      {
+        path:"/order",
+        element:<PrivetRouter><Order></Order></PrivetRouter>,
+        
+      },
+      {
+        path : "/from",
+        element:<From/>
       },
       
       {
@@ -105,38 +115,38 @@ const router = createBrowserRouter([
 
       {
         path:"/cocola/:id",
-        element:<Pone/>,
+        element:<PrivetRouter><Pone/></PrivetRouter>,
         loader : () => fetch('http://localhost:5000/cocalola')
         
         
       },
       {
         path:"/coffce/:id",
-        element:<Ptwo></Ptwo>,
+        element:<PrivetRouter><Ptwo></Ptwo></PrivetRouter>,
         loader : () => fetch('http://localhost:5000/coffie')
         
       },
       {
         path:"/fanta/:id",
-        element:<Pthree/>,
+        element:<PrivetRouter><Pthree/></PrivetRouter>,
         loader : () => fetch('http://localhost:5000/fanta')
         
       },
       {
         path:"/mrinda/:id",
-        element:<Pfour></Pfour>,
+        element:<PrivetRouter><Pfour></Pfour></PrivetRouter>,
         loader : () => fetch('http://localhost:5000/mirinda')
         
       },
       {
         path:"/papsi/:id",
-        element:<Pfive></Pfive>,
+        element:<PrivetRouter><Pfive></Pfive></PrivetRouter>,
         loader : () => fetch('http://localhost:5000/pepsi')
        
       },
       {
         path:"/redbull/:id",
-        element:<Psix></Psix>,
+        element:<PrivetRouter><Psix></Psix></PrivetRouter>,
         loader : () => fetch('http://localhost:5000/redbull')
         
       },
