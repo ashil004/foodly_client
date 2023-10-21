@@ -23,6 +23,12 @@ import Fanta from './assets/component/brands/Fanta';
 import Mrinda from './assets/component/brands/Mrinda';
 import Papsi from './assets/component/brands/papsi';
 import RedBull from './assets/component/brands/RedBull';
+import Pone from './assets/component/IdElement/Pone';
+import Ptwo from './assets/component/IdElement/Ptwo';
+import Pthree from './assets/component/IdElement/Pthree';
+import Pfour from './assets/component/IdElement/Pfour';
+import Pfive from './assets/component/IdElement/Pfive';
+import Psix from './assets/component/IdElement/Psix';
 
 const router = createBrowserRouter([
   {
@@ -61,34 +67,80 @@ const router = createBrowserRouter([
       {
         path:"/cocola",
         element:<Cocola/>,
-        loader : () =>  fetch('http://localhost:5000/cocolas') 
+        loader : () => fetch('http://localhost:5000/cocalola')
+        
         
       },
       {
         path:"/coffce",
         element:<Coffce/>,
-        loader: () => fetch('http://localhost:5000/coffiec')
+        loader : () => fetch('http://localhost:5000/coffie')
+        
       },
       {
         path:"/fanta",
         element:<Fanta/>,
-        loader: () => fetch('http://localhost:5000//fantas')
+        loader : () => fetch('http://localhost:5000/fanta')
+        
       },
       {
         path:"/mrinda",
         element:<Mrinda/>,
-        loader: () => fetch('http://localhost:5000/mrindas')
+        loader : () => fetch('http://localhost:5000/mirinda')
+        
       },
       {
         path:"/papsi",
         element:<Papsi/>,
-        loader : ()=> fetch('http://localhost:5000/pepsie')
+        loader : () => fetch('http://localhost:5000/pepsi')
+       
       },
       {
         path:"/redbull",
         element:<RedBull/>,
-        loader : ()=> fetch('http://localhost:5000/redbulls')
+        loader : () => fetch('http://localhost:5000/redbull')
+        
       },
+      // neww id add 
+
+      {
+        path:"/cocola/:id",
+        element:<Pone/>,
+        loader : () => fetch('http://localhost:5000/cocalola')
+        
+        
+      },
+      {
+        path:"/coffce/:id",
+        element:<Ptwo></Ptwo>,
+        loader : () => fetch('http://localhost:5000/coffie')
+        
+      },
+      {
+        path:"/fanta/:id",
+        element:<Pthree/>,
+        loader : () => fetch('http://localhost:5000/fanta')
+        
+      },
+      {
+        path:"/mrinda/:id",
+        element:<Pfour></Pfour>,
+        loader : () => fetch('http://localhost:5000/mirinda')
+        
+      },
+      {
+        path:"/papsi/:id",
+        element:<Pfive></Pfive>,
+        loader : () => fetch('http://localhost:5000/pepsi')
+       
+      },
+      {
+        path:"/redbull/:id",
+        element:<Psix></Psix>,
+        loader : () => fetch('http://localhost:5000/redbull')
+        
+      },
+      
 
     ]
 

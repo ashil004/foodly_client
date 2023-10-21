@@ -1,22 +1,18 @@
-
-import { useLoaderData, } from "react-router-dom";
-import ProductCard from "./ProductCard";
-
+import { useLoaderData } from "react-router-dom";
+import ProductOnes from "./ProductOnes";
 
 const Cocola = () => {
-    const productsname =useLoaderData();
-    console.log(productsname);
-   
-   
-    
 
+    const ProductsOne = useLoaderData();
     return (
         <div>
             
-           {
-            productsname.map(productname => <ProductCard to={productname._id} productsname ={productname} ></ProductCard>)
-           }
-
+            <div className="grid md:grid-cols-2 gap-4 max-w-7xl mx-auto">
+            {
+                ProductsOne.map(Product => <ProductOnes Product key={ProductsOne._id} ProductsOne ={Product}></ProductOnes>)
+            }
+            </div>
+           
 
 
         </div>

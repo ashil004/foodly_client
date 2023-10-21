@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2'
+
 const Services = () => {
 
     const box = event => {
@@ -12,10 +13,10 @@ const Services = () => {
         const productObject ={ photo,product,price,description,rating };
         console.log(productObject);
         
-        fetch('http://localhost:5000/foodliy/Brand/cocolas',{
+        fetch('http://localhost:5000/fanta',{
             method:'POST',
             headers:{
-                "content-type": "application/json",
+                "content-type": "application/json"
             },
             body: JSON.stringify(productObject)
             
