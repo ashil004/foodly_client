@@ -13,7 +13,7 @@ const Services = () => {
         const productObject ={ photo,product,price,description,rating };
         console.log(productObject);
         
-        fetch('http://localhost:5000/Cart',{
+        fetch(' https://foodliy-server-1n12fyek1-ashik-pramaniks-projects.vercel.app/Cart',{
             method:'POST',
             headers:{
                 "content-type": "application/json"

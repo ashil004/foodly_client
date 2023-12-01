@@ -40,7 +40,7 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>,
-        loader: () => fetch('http://localhost:5000/Brand')
+        loader: () => fetch(' https://foodliy-server-1n12fyek1-ashik-pramaniks-projects.vercel.app/Brand')
       },
       {
         path:"/about",
@@ -77,38 +77,38 @@ const router = createBrowserRouter([
       {
         path:"/cocola",
         element:<Cocola/>,
-        loader : () => fetch('http://localhost:5000/cocalola')
+        loader : () => fetch(' https://foodliy-server-1n12fyek1-ashik-pramaniks-projects.vercel.app/cocalola')
         
         
       },
       {
         path:"/coffce",
         element:<Coffce/>,
-        loader : () => fetch('http://localhost:5000/coffie')
+        loader : () => fetch(' https://foodliy-server-1n12fyek1-ashik-pramaniks-projects.vercel.app/coffie')
         
       },
       {
         path:"/fanta",
         element:<Fanta/>,
-        loader : () => fetch('http://localhost:5000/fanta')
+        loader : () => fetch(' https://foodliy-server-1n12fyek1-ashik-pramaniks-projects.vercel.app/fanta')
         
       },
       {
         path:"/mrinda",
         element:<Mrinda/>,
-        loader : () => fetch('http://localhost:5000/mirinda')
+        loader : () => fetch(' https://foodliy-server-1n12fyek1-ashik-pramaniks-projects.vercel.app/mirinda')
         
       },
       {
         path:"/papsi",
         element:<Papsi/>,
-        loader : () => fetch('http://localhost:5000/pepsi')
+        loader : () => fetch(' https://foodliy-server-1n12fyek1-ashik-pramaniks-projects.vercel.app/pepsi')
        
       },
       {
         path:"/redbull",
         element:<RedBull/>,
-        loader : () => fetch('http://localhost:5000/redbull')
+        loader : () => fetch(' https://foodliy-server-1n12fyek1-ashik-pramaniks-projects.vercel.app/redbull')
         
       },
       // neww id add 
@@ -116,38 +116,38 @@ const router = createBrowserRouter([
       {
         path:"/cocola/:id",
         element:<PrivetRouter><Pone/></PrivetRouter>,
-        loader : () => fetch('http://localhost:5000/cocalola')
+        loader : () => fetch(' https://foodliy-server-1n12fyek1-ashik-pramaniks-projects.vercel.app/cocalola')
         
         
       },
       {
         path:"/coffce/:id",
         element:<PrivetRouter><Ptwo></Ptwo></PrivetRouter>,
-        loader : () => fetch('http://localhost:5000/coffie')
+        loader : () => fetch(' https://foodliy-server-1n12fyek1-ashik-pramaniks-projects.vercel.app/coffie')
         
       },
       {
         path:"/fanta/:id",
         element:<PrivetRouter><Pthree/></PrivetRouter>,
-        loader : () => fetch('http://localhost:5000/fanta')
+        loader : () => fetch(' https://foodliy-server-1n12fyek1-ashik-pramaniks-projects.vercel.app/fanta')
         
       },
       {
         path:"/mrinda/:id",
         element:<PrivetRouter><Pfour></Pfour></PrivetRouter>,
-        loader : () => fetch('http://localhost:5000/mirinda')
+        loader : () => fetch(' https://foodliy-server-1n12fyek1-ashik-pramaniks-projects.vercel.app/mirinda')
         
       },
       {
         path:"/papsi/:id",
         element:<PrivetRouter><Pfive></Pfive></PrivetRouter>,
-        loader : () => fetch('http://localhost:5000/pepsi')
+        loader : () => fetch(' https://foodliy-server-1n12fyek1-ashik-pramaniks-projects.vercel.app/pepsi')
        
       },
       {
         path:"/redbull/:id",
         element:<PrivetRouter><Psix></Psix></PrivetRouter>,
-        loader : () => fetch('http://localhost:5000/redbull')
+        loader : () => fetch(' https://foodliy-server-1n12fyek1-ashik-pramaniks-projects.vercel.app/redbull')
         
       },
       
